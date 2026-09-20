@@ -284,6 +284,22 @@
   .award .body b{ display:block; font-size:14.5px; margin-bottom:2px; }
   .award .body span{ font-size:13px; color:var(--text-dim); }
 
+  /* ---------- ACHIEVEMENTS ---------- */
+  .achv-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:680px){ .achv-grid{ grid-template-columns:1fr; } }
+  .achv{
+    display:flex; gap:12px; align-items:flex-start; padding:16px;
+    border:1px solid var(--panel-border); border-radius:var(--radius); background:var(--panel);
+    transition:border-color 0.15s ease, transform 0.15s ease;
+  }
+  .achv:hover{ border-color:var(--amber); transform:translateY(-1px); }
+  .achv .icon{
+    color:var(--amber); font-family:var(--mono); font-size:15px; line-height:1.3;
+    flex-shrink:0; margin-top:1px;
+  }
+  .achv .body b{ display:block; font-size:14.5px; margin-bottom:4px; }
+  .achv .body span{ font-size:13.5px; color:var(--text-dim); line-height:1.55; }
+
   /* ---------- CONTACT ---------- */
   .contact-panel{
     border:1px solid var(--panel-border); border-radius:var(--radius); background:var(--bg-raise);
@@ -315,8 +331,8 @@
       <a href="#summary">Summary</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
       <a href="#education">Education</a>
+      <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -340,7 +356,7 @@
     </p>
 
     <div class="cta-row">
-	  <a class="btn btn-primary" download href="Thenmozhi_Resume (1).pdf">Download resume</a>
+      <a class="btn btn-primary" download href="Thenmozhi_Resume (1).pdf">Download resume</a>
       <a class="btn btn-ghost" href="#experience">View experience</a>
       <a class="btn btn-ghost" href="mailto:thenmozhimaruthamuthu11@gmail.com">Email me</a>
 	  <a class="btn btn-ghost" href="https://www.linkedin.com/in/thenmozhi-maruthamuthu-a87a77436/">LinkedIn</a>
@@ -414,7 +430,7 @@
   <section id="skills">
     <div class="sec-head">
       <h2 class="sec-title">Skills</h2>
-      <span class="sec-meta"><span style="color:var(--ok);">●</span> all systems operational</span>
+      <span class="sec-meta"><span style="color:var(--ok);">●</span> All systems operational</span>
     </div>
 
     <div class="skill-group">
@@ -443,7 +459,7 @@
     <div class="skill-group">
       <h3>Cloud &amp; DevOps</h3>
       <div class="skill-tags">
-        <span class="tag"><span class="dot"></span>AWS</span>
+        <span class="tag"><span class="dot"></span>AWS Grafana</span>
         <span class="tag"><span class="dot"></span>Docker</span>
         <span class="tag"><span class="dot"></span>Linux</span>
       </div>
@@ -462,7 +478,7 @@
   <section id="experience">
     <div class="sec-head">
       <h2 class="sec-title">Experience</h2>
-      <span class="sec-meta">click an entry to expand</span>
+      <span class="sec-meta">Click an entry to expand</span>
     </div>
 
     <span class="company-tag">Tata Consultancy Services (TCS) · Java Developer · Dec 2021 – Present</span>
@@ -509,10 +525,10 @@
 
   
 
-  <!-- EDUCATION & AWARDS -->
+  <!-- EDUCATION -->
   <section id="education">
     <div class="sec-head">
-      <h2 class="sec-title">Education &amp; awards</h2>
+      <h2 class="sec-title">Education</h2>
     </div>
     <div class="grid-2">
       <div>
@@ -522,6 +538,8 @@
           <div class="edu-dates">2023 – 2025</div>
 		  <div class="edu-percentage">Percentage: 85.95%</div>
         </div>
+      </div>
+      <div>
         <div class="edu-item">
           <div class="edu-degree">B.Sc. Computer Science</div>
           <div class="edu-school">SNMV College of Arts and Science, Coimbatore</div>
@@ -529,15 +547,49 @@
 		  <div class="edu-percentage">Percentage: 88.9%</div>
         </div>
       </div>
-      <div>
-        <div class="award">
-          <span class="icon">&#9733;</span>
-          <div class="body">
-            <b>Bharathiar University Rank Holder</b>
-            <span>10th Rank, B.Sc. Computer Science</span>
-          </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <div class="sec-head">
+      <h2 class="sec-title">Achievements</h2>
+      <span class="sec-meta"><span style="color:var(--amber);">&#9733;</span> Recognition &amp; Impact</span>
+    </div>
+    <div class="achv-grid">
+
+      <div class="achv">
+        <span class="icon">&#9733;</span>
+        <div class="body">
+          <b>University Rank Holder</b>
+          <span>Secured 10th Rank in B.Sc. Computer Science at Bharathiar University.</span>
         </div>
       </div>
+
+      <div class="achv">
+        <span class="icon">&#9733;</span>
+        <div class="body">
+          <b>On-the-Spot Award, TCS</b>
+          <span>Received customer appreciation and the On-the-Spot Award at TCS for effective contribution and quality delivery in project activities.</span>
+        </div>
+      </div>
+
+      <div class="achv">
+        <span class="icon">&#9733;</span>
+        <div class="body">
+          <b>SQL Query Optimization</b>
+          <span>Optimized SQL queries for APIs to improve query execution efficiency and API response performance.</span>
+        </div>
+      </div>
+
+      <div class="achv">
+        <span class="icon">&#9733;</span>
+        <div class="body">
+          <b>AWS Grafana Monitoring Dashboards</b>
+          <span>Created AWS Grafana dashboards for monitoring API performance, service health, and operational metrics, supporting faster issue identification and troubleshooting.</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -653,8 +705,6 @@
       });
     });
   });
-
-
 </script>
 
 </body>
